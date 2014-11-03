@@ -1,0 +1,9 @@
+IRC-Stackoverflow
+-----------------
+
+This script is intended to be invoked as a cronjob, and piped into an `ii`
+instance.  It takes a stackoverflow tag and prints questions that are new
+since it was last run (with the given state file).
+
+This is pretty similar to irc-reddit so they could probably be generalized into
+some sort of shared library.  Oh well.
