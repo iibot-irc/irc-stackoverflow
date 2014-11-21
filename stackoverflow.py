@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import feedparser, sys
 
 tag = sys.argv[1]
@@ -13,6 +13,5 @@ with open(STATEFILE) as sf:
 for question in d['entries']:
   if not question['id'] in seen:
     with open(STATEFILE, "a") as f:
-      f.write(new+"\n")
-    new.append(question['id'])
-    print question['title']+":", question["link"], "by", question["author"]
+      f.write(question['id']+"\n")
+    print(question['title']+":", question["link"], "by", question["author"])
